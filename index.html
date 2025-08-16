@@ -84,6 +84,30 @@
         border-color: #ef4444;
         box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
       }
+      
+      /* Instagram embed styles */
+      .instagram-embed-container {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .instagram-embed-container iframe {
+        min-height: 600px;
+        background: #ffffff;
+        transition: all 0.3s ease;
+      }
+      
+      .instagram-embed-container:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      
+      @media (max-width: 768px) {
+        .instagram-embed-container iframe {
+          min-height: 500px;
+        }
+      }
     </style>
   </head>
   <body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
@@ -210,20 +234,13 @@
         </div>
 
         <!-- Services Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-4xl mx-auto">
           <div class="text-center p-6 bg-gray-50 rounded-xl">
             <div class="text-4xl text-blue-600 mb-4">
               <i class="fas fa-robot"></i>
             </div>
             <h3 class="text-xl font-semibold mb-2">AI-Powered Analysis</h3>
             <p class="text-gray-600">Instant model analysis with slicing recommendations and print optimization</p>
-          </div>
-          <div class="text-center p-6 bg-gray-50 rounded-xl">
-            <div class="text-4xl text-green-600 mb-4">
-              <i class="fas fa-cogs"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Professional Slicing</h3>
-            <p class="text-gray-600">Expert slicing with optimal settings for your specific material and requirements</p>
           </div>
           <div class="text-center p-6 bg-gray-50 rounded-xl">
             <div class="text-4xl text-purple-600 mb-4">
@@ -247,33 +264,37 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 class="text-2xl font-semibold mb-4 text-gray-800">Community Growth</h3>
-            <ul class="space-y-3 text-gray-600">
-              <li class="flex items-center gap-3">
-                <i class="fas fa-check text-green-500"></i>
-                Weekly group rides and events
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fas fa-check text-green-500"></i>
-                Cycling education and safety workshops
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fas fa-check text-green-500"></i>
-                Advocacy for cycling infrastructure
-              </li>
-              <li class="flex items-center gap-3">
-                <i class="fas fa-check text-green-500"></i>
-                Content creation and social media engagement
-              </li>
-            </ul>
-          </div>
-          <div class="text-center">
-            <div class="text-6xl text-green-600 mb-4">
-              <i class="fas fa-bicycle"></i>
+        <div class="flex justify-center">
+          <div class="max-w-4xl w-full">
+            <div class="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-sm border border-gray-100">
+              <div class="text-center mb-6">
+                <div class="inline-flex items-center gap-3 text-green-600 mb-3">
+                  <i class="fab fa-instagram text-2xl"></i>
+                  <h3 class="text-xl font-semibold text-gray-800">Follow Our Journey</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Latest updates from the cycling community</p>
+              </div>
+              
+                             <div class="instagram-embed-container bg-white rounded-xl overflow-hidden shadow-inner">
+                 <iframe 
+                   src="https://www.instagram.com/jm_rides_bikes/embed" 
+                   class="w-full h-[600px] border-0"
+                   title="JM Rides Bikes Instagram Feed"
+                   loading="lazy">
+                 </iframe>
+               </div>
+              
+              <div class="text-center mt-6">
+                <a 
+                  href="https://instagram.com/jm_rides_bikes" 
+                  target="_blank" 
+                  class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-200 font-medium shadow-sm hover:shadow-md"
+                >
+                  <i class="fab fa-instagram"></i>
+                  Follow @jm_rides_bikes
+                </a>
+              </div>
             </div>
-            <p class="text-lg text-gray-600">Building connections, one ride at a time</p>
           </div>
         </div>
 
