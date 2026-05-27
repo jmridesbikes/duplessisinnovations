@@ -1,6 +1,6 @@
 /*
 ========================================
-EMAIL HANDLER FOR DU PLESSIS INNOVATIONS
+EMAIL HANDLER FOR DUPLESSIS INNOVATIONS
 ========================================
 
 This file handles all email-related functionality:
