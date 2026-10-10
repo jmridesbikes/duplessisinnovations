@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="guardianlink-bg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E6F5F6"/>
+    </linearGradient>
+    <linearGradient id="guardianlink-shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22BDBE"/>
+      <stop offset="0.55" stop-color="#0FA0AA"/>
+      <stop offset="1" stop-color="#0B7F9E"/>
+    </linearGradient>
+    <filter id="guardianlink-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="22"/>
+      <feOffset dy="20"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".22"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#guardianlink-bg)"/>
+  <g transform="translate(512 530) scale(1.17) translate(-512 -530)">
+    <path d="M362 214 H662 Q770 214 770 322 V500 C770 684 642 800 540 852 Q512 866 484 852 C382 800 254 684 254 500 V322 Q254 214 362 214 Z" fill="url(#guardianlink-shield)" filter="url(#guardianlink-shadow)"/>
+  </g>
+  <path d="M368.4 544.8 A120.0 120.0 0 1 0 275.2 448.2 C281.0 481.3 280.6 528.2 273.4 553.4 C302.2 553.4 342.6 539.3 368.4 544.8 Z" fill="#FFFFFF"/>
+  <path d="M653.8 665.3 A102.0 102.0 0 1 1 733.1 583.2 C728.1 611.3 728.5 651.2 734.6 672.6 C710.1 672.6 675.8 660.6 653.8 665.3 Z" fill="#FFFFFF" fill-opacity=".5"/>
+</svg>
