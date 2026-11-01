@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support | Market Day Change | Duplessis Innovations</title>
+    <meta
+      name="description"
+      content="Help for Market Day Change, a free app that helps kids give correct change at a school market-day stall."
+    />
+    <meta name="author" content="Duplessis Innovations" />
+    <meta name="theme-color" content="#071414" />
+    <link rel="canonical" href="https://duplessisinnovations.com/market-day-change/" />
+
+    <meta property="og:title" content="Support | Market Day Change" />
+    <meta
+      property="og:description"
+      content="Help for Market Day Change, a free app that helps kids give correct change at a school market-day stall."
+    />
+    <meta property="og:image" content="https://duplessisinnovations.com/assets/logo-dark.png" />
+    <meta property="og:url" content="https://duplessisinnovations.com/market-day-change/" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Support | Market Day Change" />
+    <meta
+      name="twitter:description"
+      content="Help for Market Day Change, a free app that helps kids give correct change at a school market-day stall."
+    />
+    <meta name="twitter:image" content="https://duplessisinnovations.com/assets/logo-dark.png" />
+
+    <link rel="icon" type="image/png" href="/assets/logo-nav.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #071414;
+        --surface: #0e2626;
+        --ink: #e8f1f1;
+        --muted: #a9bdbd;
+        --orange: #ff7e33;
+        --orange-ink: #0a1f1f;
+        --teal: #7fd3e4;
+        --kick: #ff9a5c;
+        --line: rgba(255, 255, 255, 0.08);
+        --line-strong: rgba(255, 255, 255, 0.14);
+        --radius-control: 12px;
+        --radius-card: 20px;
+        --wrap: 1152px;
+        --nav: 72px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-padding-top: calc(var(--nav) + 16px);
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        html {
+          scroll-behavior: smooth;
+        }
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, system-ui, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        color-scheme: dark;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: var(--teal);
+      }
+
+      a:hover {
+        color: var(--ink);
+      }
+
+      :focus-visible {
+        outline: 3px solid #e8f1f1;
+        outline-offset: 3px;
+        box-shadow: 0 0 0 3px #071414;
+      }
+
+      ::selection {
+        background: rgba(255, 126, 51, 0.35);
+        color: var(--ink);
+      }
+
+      .skip {
+        position: absolute;
+        left: 16px;
+        top: 8px;
+        z-index: 80;
+        transform: translateY(-140%);
+        background: var(--orange);
+        color: var(--orange-ink);
+        font-weight: 600;
+        padding: 10px 16px;
+        border-radius: var(--radius-control);
+        text-decoration: none;
+      }
+
+      .skip:focus {
+        transform: none;
+      }
+
+      .wrap {
+        max-width: var(--wrap);
+        margin: 0 auto;
+        padding: 0 32px;
+      }
+
+      .nav-shell {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: rgba(7, 20, 20, 0.88);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .top {
+        height: var(--nav);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      .brand:hover {
+        color: var(--ink);
+      }
+
+      .brand img {
+        height: 28px;
+        width: 24px;
+        border-radius: 6px;
+        object-fit: cover;
+      }
+
+      .links {
+        display: flex;
+        gap: 32px;
+      }
+
+      .links a,
+      .mobile-menu a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .links a:hover,
+      .mobile-menu a:hover {
+        color: var(--ink);
+      }
+
+      .burger {
+        display: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid var(--line-strong);
+        cursor: pointer;
+      }
+
+      .burger i,
+      .burger i::before,
+      .burger i::after {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: currentColor;
+        position: relative;
+        content: "";
+        border-radius: 2px;
+      }
+
+      .burger i::before {
+        position: absolute;
+        top: -6px;
+      }
+
+      .burger i::after {
+        position: absolute;
+        top: 6px;
+      }
+
+      .burger[aria-expanded="true"] i {
+        background: transparent;
+      }
+
+      .burger[aria-expanded="true"] i::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      .burger[aria-expanded="true"] i::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      .mobile-menu {
+        display: none;
+        background: rgba(7, 20, 20, 0.96);
+        border-bottom: 1px solid var(--line);
+        padding: 8px 32px 16px;
+      }
+
+      .mobile-menu.open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .mobile-menu a {
+        padding: 12px 0;
+        font-size: 16px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 13px;
+        color: var(--teal);
+        border: 1px solid rgba(127, 211, 228, 0.35);
+        padding: 6px 12px;
+        border-radius: 999px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        margin: 0;
+        color: var(--ink);
+      }
+
+      .kick {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 13px;
+        color: var(--kick);
+        margin: 0 0 12px;
+      }
+
+      .btn {
+        min-height: 52px;
+        padding: 0 26px;
+        border-radius: var(--radius-control);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: none;
+        border: 1px solid transparent;
+        cursor: pointer;
+        font-family: inherit;
+      }
+
+      .btn.secondary {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: var(--line-strong);
+        color: var(--ink);
+      }
+
+      .btn.secondary:hover {
+        background: rgba(255, 255, 255, 0.12);
+        color: var(--ink);
+      }
+
+      .policy {
+        max-width: 65ch;
+        padding: 72px 0 48px;
+        font-size: 18px;
+        line-height: 1.7;
+      }
+
+      .policy-header h1 {
+        font-size: clamp(40px, 6vw, 64px);
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+        margin-top: 24px;
+        text-wrap: balance;
+      }
+
+      .updated {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 13px;
+        letter-spacing: 0.02em;
+        color: var(--kick);
+        margin: 20px 0 0;
+      }
+
+      .lede {
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.7;
+        margin: 20px 0 0;
+      }
+
+      .toc {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-card);
+        padding: 24px 28px;
+        margin: 40px 0 8px;
+      }
+
+      .toc ol {
+        margin: 0;
+        padding-left: 1.25rem;
+      }
+
+      .toc li {
+        margin: 8px 0;
+      }
+
+      .toc a {
+        color: var(--ink);
+        font-weight: 500;
+        text-decoration: none;
+      }
+
+      .toc a:hover {
+        color: var(--teal);
+      }
+
+      .policy section {
+        margin: 0;
+        padding: 36px 0 0;
+        scroll-margin-top: calc(var(--nav) + 16px);
+      }
+
+      .policy section + section {
+        margin-top: 36px;
+        border-top: 1px solid var(--line);
+      }
+
+      .policy h2 {
+        font-size: clamp(26px, 3vw, 32px);
+        letter-spacing: -0.02em;
+        margin: 0 0 14px;
+      }
+
+      .policy h3 {
+        font-size: 22px;
+        letter-spacing: -0.02em;
+        margin: 28px 0 8px;
+      }
+
+      .policy p {
+        margin: 0 0 16px;
+        color: var(--ink);
+      }
+
+      .policy ul {
+        margin: 0 0 16px;
+        padding-left: 1.25rem;
+      }
+
+      .policy li {
+        margin: 6px 0;
+        padding-left: 0.2rem;
+      }
+
+      .policy li::marker {
+        color: var(--orange);
+      }
+
+      .policy a {
+        overflow-wrap: anywhere;
+        text-underline-offset: 3px;
+      }
+
+      code {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 0.88em;
+        color: var(--teal);
+        overflow-wrap: anywhere;
+      }
+
+      .back {
+        margin: 12px 0 0;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 48px 0 56px;
+        text-align: center;
+      }
+
+      footer img {
+        width: 48px;
+        height: auto;
+        margin: 0 auto 16px;
+      }
+
+      footer p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      footer .est {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      @media (max-width: 800px) {
+        .links {
+          display: none;
+        }
+
+        .burger {
+          display: flex;
+        }
+      }
+
+      @media (min-width: 801px) {
+        .mobile-menu {
+          display: none !important;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .wrap,
+        .mobile-menu {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .policy {
+          padding-top: 48px;
+          font-size: 17px;
+        }
+
+        .lede {
+          font-size: 17px;
+        }
+
+        .toc {
+          padding: 20px;
+        }
+
+        .back .btn {
+          width: 100%;
+        }
+
+        .brand span {
+          font-size: 15px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <div class="nav-shell">
+      <nav class="top wrap" aria-label="Primary">
+        <a class="brand" href="/">
+          <img src="/assets/logo-light.png" alt="" width="24" height="28" />
+          <span>Duplessis Innovations</span>
+        </a>
+        <div class="links">
+          <a href="/#3d-printing">3D Printing</a>
+          <a href="/#cycling">Cycling</a>
+          <a href="/#software">Software</a>
+          <a href="/#apps">Our Apps</a>
+          <a href="/#contact">Contact</a>
+        </div>
+        <button
+          class="burger"
+          id="mobileMenuBtn"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <i></i>
+        </button>
+      </nav>
+      <div id="mobileMenu" class="mobile-menu wrap">
+        <a href="/#3d-printing">3D Printing</a>
+        <a href="/#cycling">Cycling</a>
+        <a href="/#software">Software</a>
+        <a href="/#apps">Our Apps</a>
+        <a href="/#contact">Contact</a>
+      </div>
+    </div>
+
+    <main id="main" tabindex="-1">
+      <div class="wrap">
+        <!--
+          Support copy is the article below. Edit the sections in place.
+          There is no build step.
+        -->
+        <article class="policy" aria-labelledby="support-title">
+          <header class="policy-header">
+            <span class="eyebrow">● Market Day Change</span>
+            <h1 id="support-title">Support</h1>
+            <p class="lede">
+              Market Day Change is a free app that helps kids give correct change at a school
+              market-day stall, by Duplessis Innovations (Pty) Ltd.
+            </p>
+          </header>
+
+          <nav class="toc" aria-label="On this page">
+            <p class="kick">// on this page</p>
+            <ol>
+              <li><a href="#questions">Questions</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#privacy">Privacy policy</a></li>
+            </ol>
+          </nav>
+
+          <section id="questions">
+            <h2>Questions</h2>
+
+            <h3>Is an account needed?</h3>
+            <p>No account is needed.</p>
+
+            <h3>Does it work offline?</h3>
+            <p>Yes. It works offline.</p>
+
+            <h3>Where do photos and prices stay?</h3>
+            <p>Item photos and prices stay on the phone.</p>
+
+            <h3>How do I change the currency?</h3>
+            <p>
+              To change the currency, tap the gear on the Home screen. That screen is titled Market
+              Day.
+            </p>
+
+            <h3>How do I delete an item?</h3>
+            <p>
+              On the Home screen, tap Edit on the item. Then tap Delete item. The app asks “Delete
+              this item?” and says it will come off the stall. Tap Delete to remove it, or Keep to
+              leave it.
+            </p>
+          </section>
+
+          <section id="contact">
+            <h2>Contact</h2>
+            <p>
+              Questions can be sent to
+              <a href="mailto:hello@duplessisinnovations.com">hello@duplessisinnovations.com</a>.
+            </p>
+          </section>
+
+          <section id="privacy">
+            <h2>Privacy policy</h2>
+            <p>
+              <a href="/market-day-change/privacy/">Read the Market Day Change privacy policy</a>.
+            </p>
+          </section>
+
+          <p class="back">
+            <a class="btn secondary" href="/">Back to Duplessis Innovations</a>
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <img src="/assets/logo-hero.png" alt="Duplessis Innovations" width="48" height="56" />
+        <p class="est">Est. 2025</p>
+        <p>&copy; 2026 Duplessis Innovations. All rights reserved.</p>
+        <p>3D Printing · Cycling Community · Software Development</p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var mobileMenuBtn = document.getElementById("mobileMenuBtn");
+        var mobileMenu = document.getElementById("mobileMenu");
+
+        function setMenu(open) {
+          mobileMenu.classList.toggle("open", open);
+          mobileMenuBtn.setAttribute("aria-expanded", String(open));
+          mobileMenuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        }
+
+        mobileMenuBtn.addEventListener("click", function () {
+          setMenu(mobileMenuBtn.getAttribute("aria-expanded") !== "true");
+        });
+
+        mobileMenu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            setMenu(false);
+          });
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") setMenu(false);
+        });
+      })();
+    </script>
+  </body>
+</html>
